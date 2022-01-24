@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import thumbnail from "./thumbnail.png";
-import are from "./are.mp4";
 import spman1 from "./spman1.jpg";
 import sunflower from "./sunflower.mp4"
 const Singlevideo = () => {
