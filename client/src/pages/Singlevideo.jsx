@@ -5,7 +5,7 @@ import spman1 from "./spman1.jpg";
 import sunflower from "./sunflower.mp4"
 const Singlevideo = () => {
   const [allposts, setAllposts] = useState([]);
-  const [singlevideo, setSinglevideo] = useState(null);
+  const [singlevideo, setSinglevideo] = useState('');
   const [play, setPlay] = useState(false);
 
   useEffect(() => {
@@ -63,7 +63,7 @@ const Singlevideo = () => {
             </div>
           </div>
           <div className="container4">
-            {allposts.map((ele) => {
+            { allposts &&  allposts.map((ele) => {
               return (
                 <div className="container3mono">
                   {ele.videothumbnail ? (
