@@ -40,13 +40,13 @@ const Singlevideo = () => {
           >
             Close Video
           </div>
-          <video controls autoPlay>
+          <video width="550" height="300" controls autoPlay>
             <source src={singlevideo} type="video/mp4" />
           </video>
         </div>
       ) : (
         <>
-          <div className="container1">
+          {/* <div className="container1">
             <div className="poster2box">
               <img className="poster2" src={spman1} alt=""></img>
               <div class="centered">
@@ -61,7 +61,7 @@ const Singlevideo = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
           <div className="container4">
             { allposts &&  allposts.map((ele) => {
               return (

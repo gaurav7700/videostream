@@ -97,32 +97,32 @@ app.get("/getvideo", (req, res)=>{
   })
 });
 
-// app.get("/getsinglevideo", (req, res)=>{
-//   const range = req.headers.range;
+app.get("/getsinglevideo", (req, res)=>{
+  const range = req.headers.range;
 
-//   if(!range) {
-//     res.send("Range Required")
-//   }
+  if(!range) {
+    res.send("Range Required")
+  }
 
-//   const videPath= 'are.mp4'
-//   const videoSize = fs.statSync("are.mp4").videoSize
+  const videPath= 'are.mp4'
+  const videoSize = fs.statSync("are.mp4").videoSize
 
-//   const CHUNK_SIZE = 10**6;
-//   const start = Number(range.replace(/\D/g), '')
-//   const end = Math.min(start + CHUNK_SIZE, videoSize -1)
+  const CHUNK_SIZE = 10**6;
+  const start = Number(range.replace(/\D/g), '')
+  const end = Math.min(start + CHUNK_SIZE, videoSize -1)
 
-//   const contentlength = end-start + 1;
-//   const headers = {
-//     "Content-Range":`bytes ${start} - ${end} / ${videoSize}`,
-//     "Accept-Ranges": "bytes",
-//     "Content-Length": contentlength,
-//     "Content-Type": "video/mp4"
-//   }
-// res.writeHead(206, headers)
-//   const videoStream = fs.createReadStream(videPath, {start, end});
-//   videoStream.pipe(res)
+  const contentlength = end-start + 1;
+  const headers = {
+    "Content-Range":`bytes ${start} - ${end} / ${videoSize}`,
+    "Accept-Ranges": "bytes",
+    "Content-Length": contentlength,
+    "Content-Type": "video/mp4"
+  }
+res.writeHead(206, headers)
+  const videoStream = fs.createReadStream(videPath, {start, end});
+  videoStream.pipe(res)
 
-// });
+});
 
 app.listen(process.env.PORT || 3001, () => {
   console.log("server is running");

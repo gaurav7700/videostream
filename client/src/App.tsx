@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <Router>
-      
+      <Navigation/>
         <Routes>
           <Route path="/" element={<Singlevideo />} />
           <Route path="/upload" element={<Upload />} />

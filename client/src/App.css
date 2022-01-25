@@ -7,11 +7,28 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-tap-highlight-color: transparent;
 }
-.navbar {
+.navbar ul {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid black;
+  flex-wrap: nowrap;
+  list-style: none;
+  justify-content: space-around;
+}
+.navbar ul li {
+  cursor: pointer;
+}
+.navbar ul li {
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.5s ease;
+}
+.navbar ul li.active,
+.navbar ul li:hover {
+  background-color: #423161;
 }
 
 li {
@@ -21,18 +38,6 @@ li {
   font-size: 25px;
 }
 /* ******************* */
-
-button {
-  cursor: pointer;
-  color: white;
-  margin: auto 2px;
-  width: 75px;
-  height: 5vh;
-  background-color: #423161;
-  border-radius: 15px;
-  border: 2px #423161 solid;
-  margin-right: 50px;
-}
 
 .container1 {
   margin-right: auto;
@@ -46,15 +51,15 @@ button {
   background-color: #252525;
   margin-bottom: 20px;
 }
-.poster2box{
+.poster2box {
   text-align: center;
   color: white;
   width: 100%;
 }
 .poster2 {
-width: 100%;
-height: 100%;
-border-radius:0px 30px 30px 30px;
+  width: 100%;
+  height: 100%;
+  border-radius: 0px 30px 30px 30px;
 }
 .centered {
   position: absolute;
@@ -105,7 +110,7 @@ border-radius:0px 30px 30px 30px;
 }
 
 input {
-  margin: auto;
+  margin: 10px 0px;
   width: 250px;
   height: 5vh;
   border: 2px #423161 solid;
@@ -183,69 +188,36 @@ input {
   color: white;
   background: #423161;
 }
-.submitform{
+.submitform {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.videoplayer{
+.button {
+  cursor: pointer;
+  color: white;
+  width: auto;
+  height: auto;
+  background-color: #423161;
+  border-radius: 15px;
+  border: 2px #423161 solid;
+  padding: 10px 15px;
+  font-size: 18px;
+}
+
+.videoplayer {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 20vh;
   flex-direction: column;
 }
-.video{
-  width: 100vw;
-  height: 70vh;
-}
+
 /* ****************** */
-@media only screen and (max-width: 1250px) and (min-width: 1000px){
-  nav {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    height: 65px;
-    width: 100vw;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  .dash{
-    color: white;
-    font-size: 30px;
-  }
- 
-  
-  nav ul {
-    display: flex;
-    flex-wrap: nowrap;
-    list-style: none;
-  }
-  nav ul li {
-    cursor: pointer;
-    margin-left: 100px;
-    margin-right:100px;
-  }
-  nav ul li a {
-    color: #f2f2f2;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 8px 15px;
-    border-radius: 5px;
-    letter-spacing: 1px;
-    transition: all 0.5s ease;
-  }
-  nav ul li a.active,
-  nav ul li a:hover {
-   
-    background-color: #423161;
-  }
-  
-  
-  .container1{
+@media only screen and (max-width: 1250px) and (min-width: 1000px) {
+  .container1 {
     margin-right: auto;
     margin-left: auto;
     display: flex;
@@ -257,29 +229,27 @@ input {
     background-color: #252525;
     margin-bottom: 20px;
   }
-  .poster1{
+  .poster1 {
     height: auto;
     width: 60%;
     background-color: #252525;
-    border: #252525  1px solid;
-    border-radius: 30px 0  0 30px;
+    border: #252525 1px solid;
+    border-radius: 30px 0 0 30px;
   }
-  .poster2{
+  .poster2 {
     height: auto;
     width: 40%;
     background-color: #423161;
     float: right;
     border-radius: 0 30px 0 30px;
-  
   }
   .poster1 {
-    padding: 5px 30px 10px 30px ;
+    padding: 5px 30px 10px 30px;
   }
   .poster1 h1 {
     font-size: 40px;
-    
   }
-  .poster1  ul {
+  .poster1 ul {
     float: left;
     display: flex;
     margin-right: 100px;
@@ -288,12 +258,12 @@ input {
   }
   .poster1div div {
     cursor: pointer;
-    font-size : 20px;
-    margin-right: 30px ;
-    border: 2px #423161  solid;
+    font-size: 20px;
+    margin-right: 30px;
+    border: 2px #423161 solid;
     float: left;
     padding: 2px 10px 3px 10px;
-    border-radius: 15px 0px 15px 15px ;
+    border-radius: 15px 0px 15px 15px;
     letter-spacing: 1px;
     transition: all 0.3s ease;
   }
@@ -301,63 +271,61 @@ input {
     color: white;
     background: #423161;
   }
-  .poster1 p{
+  .poster1 p {
     line-height: 1.6;
   }
-  .overview{
+  .overview {
     font-size: 20px;
   }
-  
-  .genre1{
+
+  .genre1 {
     display: flex;
     width: 90vw;
-    margin-right:auto;
+    margin-right: auto;
     margin-left: auto;
     height: 5vh;
     align-items: center;
     justify-content: center;
     color: white;
   }
-  .item1{
-   
+  .item1 {
     border: 2px #423161 solid;
-    margin-right:auto;
+    margin-right: auto;
     margin-left: auto;
     width: auto;
     height: 4vh;
-    border-radius: 15px 0px 15px 15px ;
+    border-radius: 15px 0px 15px 15px;
     padding: 2px 10px;
     font-size: 15px;
   }
-  input{
-    margin: auto ;
+  input {
+    margin: auto;
     width: 150px;
     height: 5vh;
     border: 2px #423161 solid;
     border-radius: 15px;
-    margin-right: 10px ;
+    margin-right: 10px;
     outline: transparent;
     padding: 5px 9px;
     color: white;
-    background-color: #252525  ;
+    background-color: #252525;
   }
-  button{
+  button {
     cursor: pointer;
     color: white;
-      margin: auto;
-      width: auto ;
-      height: 5vh;
-      background-color: #423161 ;
-      border-radius: 15px;
-      border: 2px #423161 solid;
-      margin-right: 50px;
-      
+    margin: auto;
+    width: auto;
+    height: 5vh;
+    background-color: #423161;
+    border-radius: 15px;
+    border: 2px #423161 solid;
+    margin-right: 50px;
   }
   .item1:hover {
     transition: all 0.5s ease;
     background-color: #423161;
   }
-  .container4{
+  .container4 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -366,13 +334,11 @@ input {
     margin-left: auto;
     height: auto;
     width: 90vw;
-   
-   
-  } 
-  .container3mono{
+  }
+  .container3mono {
     background-color: #252525;
     cursor: pointer;
-    
+
     display: flex;
     margin: 4px;
     width: 32%;
@@ -381,97 +347,52 @@ input {
     color: white;
     border-radius: 0 30px 30px 30px;
     transition: all 0.5s ease;
-    }
-    .container3mono:hover {
-      transform: scale(1.1);
-    }
-    .c3poster1{
-      width: 50%;
-      height: auto;
-      overflow: hidden;
-      border-radius: 0 30px 0 30px;
-      
-    }
-    .c3poster2{
-      padding-bottom: 15px;
-      height: 100%;
-      width: 50%;
-      padding-left: 10px ;
-      overflow: hidden;
-      border-radius: 0 30px 0 0;
-      
-    }
-    .c3poster2 h3{
-      font-size: 16px;
-      margin-top: 8px;
-      margin-bottom: 5px;
-    }
-    .c3poster2 div{
-      margin: 8px 0px;
-      list-style: none;
-      text-decoration: none;
-      font-size: 14px;
-    }
-    .poster1div1 div {
-      cursor: pointer;
-      border: 2px #423161  solid;
-      float: left;
-      margin-top: 8px;
-      padding: 2px 8px;
-      border-radius: 15px 0px 15px 15px ;
-      letter-spacing: 1px;
-      transition: all 0.3s ease;
-    }
-    .poster1div1 div:hover {
-      color: white;
-      background: #423161;
-    }
-}
-@media only screen and (max-width: 1000px) and (min-width: 750px){
-  nav {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    height: 65px;
-    width: 100vw;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
   }
-  .dash{
-    color: white;
-    font-size: 30px;
+  .container3mono:hover {
+    transform: scale(1.1);
   }
- 
-  nav ul {
-    display: flex;
-    flex-wrap: nowrap;
+  .c3poster1 {
+    width: 50%;
+    height: auto;
+    overflow: hidden;
+    border-radius: 0 30px 0 30px;
+  }
+  .c3poster2 {
+    padding-bottom: 15px;
+    height: 100%;
+    width: 50%;
+    padding-left: 10px;
+    overflow: hidden;
+    border-radius: 0 30px 0 0;
+  }
+  .c3poster2 h3 {
+    font-size: 16px;
+    margin-top: 8px;
+    margin-bottom: 5px;
+  }
+  .c3poster2 div {
+    margin: 8px 0px;
     list-style: none;
-    align-items: center;
-    justify-content: center;
-  }
-  nav ul li {
-    cursor: pointer;
-    margin-left: 30px;
-    margin-right:30px;
-  }
-  nav ul li a {
-    color: #f2f2f2;
     text-decoration: none;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 8px 15px;
-    border-radius: 5px;
+    font-size: 14px;
+  }
+  .poster1div1 div {
+    cursor: pointer;
+    border: 2px #423161 solid;
+    float: left;
+    margin-top: 8px;
+    padding: 2px 8px;
+    border-radius: 15px 0px 15px 15px;
     letter-spacing: 1px;
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
   }
-  nav ul li a.active,
-  nav ul li a:hover {
-   
-    background-color: #423161;
+  .poster1div1 div:hover {
+    color: white;
+    background: #423161;
   }
-  
-  .container1{
+}
+@media only screen and (max-width: 1000px) and (min-width: 750px) {
+  .container1 {
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -483,29 +404,27 @@ input {
     background-color: #252525;
     margin-bottom: 20px;
   }
-  .poster1{
+  .poster1 {
     height: auto;
     width: 60%;
     background-color: #252525;
-    border: #252525  1px solid;
-    border-radius: 30px 0  0 30px;
+    border: #252525 1px solid;
+    border-radius: 30px 0 0 30px;
   }
-  .poster2{
+  .poster2 {
     height: auto;
     width: 40%;
     background-color: #423161;
     float: right;
     border-radius: 0 30px 0 30px;
-  
   }
   .poster1 {
-    padding: 5px 15px 10px 30px ;
+    padding: 5px 15px 10px 30px;
   }
   .poster1 h1 {
     font-size: 30px;
-    
   }
-  .poster1  ul {
+  .poster1 ul {
     float: left;
     display: flex;
     margin-right: 100px;
@@ -514,13 +433,13 @@ input {
   }
   .poster1div div {
     cursor: pointer;
-    font-size : 18px;
-    margin-right: 30px ;
+    font-size: 18px;
+    margin-right: 30px;
 
-    border: 2px #423161  solid;
+    border: 2px #423161 solid;
     float: left;
     padding: 2px 10px 3px 10px;
-    border-radius: 15px 0px 15px 15px ;
+    border-radius: 15px 0px 15px 15px;
     letter-spacing: 1px;
     transition: all 0.3s ease;
   }
@@ -528,74 +447,71 @@ input {
     color: white;
     background: #423161;
   }
-  .poster1 p{
+  .poster1 p {
     margin: 8px 0px;
     line-height: 1.6;
   }
-  .overview{
+  .overview {
     font-size: 18px;
   }
-  
-  .genre1{
+
+  .genre1 {
     box-sizing: border-box;
     display: flex;
     width: 95vw;
-    margin-right:auto;
-    margin-left:auto;
+    margin-right: auto;
+    margin-left: auto;
     height: 5vh;
     align-items: center;
     justify-content: space-between;
     color: white;
   }
-  .item1{
+  .item1 {
     border: 2px #423161 solid;
-    margin-right:5px;
+    margin-right: 5px;
     margin-left: auto;
     width: auto;
     height: 4vh;
-    border-radius: 15px 0px 15px 15px ;
+    border-radius: 15px 0px 15px 15px;
     padding: 2px 10px;
     font-size: 14px;
   }
-  input{
-    margin: auto ;
+  input {
+    margin: auto;
     width: 150px;
     height: 5vh;
     border: 2px #423161 solid;
     border-radius: 15px;
-    margin-right: 10px ;
+    margin-right: 10px;
     outline: transparent;
     padding: 5px 9px;
     color: white;
-    background-color: #252525  ;
+    background-color: #252525;
   }
-  button{
+  button {
     cursor: pointer;
     color: white;
-      margin: auto;
-      width: auto ;
-      height: 5vh;
-      background-color: #423161 ;
-      border-radius: 15px;
-      border: 2px #423161 solid;
-      margin-right: 50px;
-      
+    margin: auto;
+    width: auto;
+    height: 5vh;
+    background-color: #423161;
+    border-radius: 15px;
+    border: 2px #423161 solid;
+    margin-right: 50px;
   }
   .item1:hover {
     transition: all 0.5s ease;
     background-color: #423161;
   }
-  .container4{ 
+  .container4 {
     display: flex;
     margin-top: 15px;
     height: auto;
     width: 90vw;
-    margin-right:auto;
+    margin-right: auto;
     margin-left: auto;
-   
-   
-  } 
-  .container3mono{
+  }
+  .container3mono {
     background-color: #252525;
     cursor: pointer;
     display: flex;
@@ -606,97 +522,52 @@ input {
     color: white;
     border-radius: 0 30px 30px 30px;
     transition: all 0.5s ease;
-    }
-    .container3mono:hover {
-      transform: scale(1.1);
-    }
-    .c3poster1{
-      width: 50%;
-      height: 30vh;
-      overflow: hidden;
-      border-radius: 0 30px 0 30px;
-      
-    }
-    .c3poster2{
-      padding-bottom: 15px;
-      height: 100%;
-      width: 50%;
-      padding-left: 10px ;
-      overflow: hidden;
-      border-radius: 0 30px 0 0;
-      
-    }
-    .c3poster2 h3{
-      font-size: 16px;
-      margin-top: 8px;
-      margin-bottom: 5px;
-    }
-    .c3poster2 div{
-      margin: 8px 0px;
-      list-style: none;
-      text-decoration: none;
-      font-size: 14px;
-    }
-    .poster1div1 div {
-      cursor: pointer;
-      border: 2px #423161  solid;
-      float: left;
-      margin-top: 8px;
-      padding: 2px 8px;
-      border-radius: 15px 0px 15px 15px ;
-      letter-spacing: 1px;
-      transition: all 0.3s ease;
-    }
-    .poster1div1 div:hover {
-      color: white;
-      background: #423161;
-    }
-}
-@media only screen and (max-width: 750px) and (min-width: 602px){
-  nav {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    height: 65px;
-    width: 100vw;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
   }
-  .dash{
-    color: white;
-    font-size: 30px;
+  .container3mono:hover {
+    transform: scale(1.1);
   }
- 
-  nav ul {
-    display: flex;
-    flex-wrap: nowrap;
+  .c3poster1 {
+    width: 50%;
+    height: 30vh;
+    overflow: hidden;
+    border-radius: 0 30px 0 30px;
+  }
+  .c3poster2 {
+    padding-bottom: 15px;
+    height: 100%;
+    width: 50%;
+    padding-left: 10px;
+    overflow: hidden;
+    border-radius: 0 30px 0 0;
+  }
+  .c3poster2 h3 {
+    font-size: 16px;
+    margin-top: 8px;
+    margin-bottom: 5px;
+  }
+  .c3poster2 div {
+    margin: 8px 0px;
     list-style: none;
-    align-items: center;
-    justify-content: center;
-  }
-  nav ul li {
-    cursor: pointer;
-    margin-left: 30px;
-    margin-right:30px;
-  }
-  nav ul li a {
-    color: #f2f2f2;
     text-decoration: none;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 8px 15px;
-    border-radius: 5px;
+    font-size: 14px;
+  }
+  .poster1div1 div {
+    cursor: pointer;
+    border: 2px #423161 solid;
+    float: left;
+    margin-top: 8px;
+    padding: 2px 8px;
+    border-radius: 15px 0px 15px 15px;
     letter-spacing: 1px;
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
   }
-  nav ul li a.active,
-  nav ul li a:hover {
-   
-    background-color: #423161;
+  .poster1div1 div:hover {
+    color: white;
+    background: #423161;
   }
-  
-  .container1{
+}
+@media only screen and (max-width: 750px) and (min-width: 602px) {
+  .container1 {
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -708,40 +579,38 @@ input {
     background-color: #252525;
     margin-bottom: 20px;
   }
-  .poster1{
+  .poster1 {
     height: auto;
     width: 60%;
     background-color: #252525;
-    border: #252525  1px solid;
-    border-radius: 30px 0  0 30px;
+    border: #252525 1px solid;
+    border-radius: 30px 0 0 30px;
   }
-  .poster2{
+  .poster2 {
     height: auto;
     width: 40%;
     background-color: #423161;
     float: right;
     border-radius: 0 30px 0 30px;
-  
   }
   .poster1 {
-    padding: 5px 10px 10px 10px ;
+    padding: 5px 10px 10px 10px;
   }
   .poster1 h1 {
     font-size: 24px;
     margin-top: 8px;
     margin-bottom: 5px;
-    
   }
- 
+
   .poster1div div {
     cursor: pointer;
-    font-size : 15px;
+    font-size: 15px;
     margin-right: 30px;
     margin-top: 5px;
-    border: 2px #423161  solid;
+    border: 2px #423161 solid;
     float: left;
     padding: 2px 10px 3px 10px;
-    border-radius: 15px 0px 15px 15px ;
+    border-radius: 15px 0px 15px 15px;
     letter-spacing: 1px;
     transition: all 0.3s ease;
   }
@@ -749,69 +618,66 @@ input {
     color: white;
     background: #423161;
   }
-  .poster1 p{
+  .poster1 p {
     margin-top: 2px;
     margin-bottom: 2px;
     line-height: 1.6;
   }
-  .overview{
+  .overview {
     font-size: 15px;
   }
-  
-  .genre1{
+
+  .genre1 {
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     width: 95vw;
-    margin-right:auto;
-    margin-left:auto;
+    margin-right: auto;
+    margin-left: auto;
     height: auto;
-   
-   
+
     color: white;
   }
-  .item1{
+  .item1 {
     border: 2px #423161 solid;
     margin-right: 5px;
     margin-left: 5px;
     width: auto;
     height: 4vh;
     margin-top: 5px;
-    border-radius: 15px 0px 15px 15px ;
+    border-radius: 15px 0px 15px 15px;
     padding: 2px 10px;
     font-size: 14px;
   }
-  input{
+  input {
     margin-top: 5px;
-    margin-left: 20px ;
+    margin-left: 20px;
     width: 150px;
     height: 5vh;
     border: 2px #423161 solid;
     border-radius: 15px;
-    margin-right: 10px ;
+    margin-right: 10px;
     outline: transparent;
     padding: 5px 9px;
     color: white;
-    background-color: #252525  ;
+    background-color: #252525;
   }
-  button{
+  button {
     cursor: pointer;
     color: white;
-     float: right;
-    
-      height: 5vh;
-      background-color: #423161 ;
-      border-radius: 15px;
-      border: 2px #423161 solid;
-    
-      
+    float: right;
+
+    height: 5vh;
+    background-color: #423161;
+    border-radius: 15px;
+    border: 2px #423161 solid;
   }
   .item1:hover {
     transition: all 0.5s ease;
     background-color: #423161;
   }
-  .container4{ 
+  .container4 {
     display: flex;
     margin-top: 15px;
     height: auto;
@@ -819,9 +685,8 @@ input {
     margin-right: auto;
     margin-left: auto;
     justify-content: center;
-   
-  } 
-  .container3mono{
+  }
+  .container3mono {
     margin-right: auto;
     margin-left: auto;
     background-color: #252525;
@@ -834,98 +699,53 @@ input {
     color: white;
     border-radius: 0 30px 30px 30px;
     transition: all 0.5s ease;
-    }
-    .container3mono:hover {
-      transform: scale(1.1);
-    }
-    .c3poster1{
-      width: 50%;
-      height: auto;
-      overflow: hidden;
-      border-radius: 0 30px 0 30px;
-      
-    }
-    .c3poster2{
-      padding-bottom: 15px;
-      height: 100%;
-      width: 50%;
-      padding-left: 10px ;
-      overflow: hidden;
-      border-radius: 0 30px 0 0;
-      
-    }
-    .c3poster2 h3{
-      font-size: 16px;
-      margin-top: 8px;
-      margin-bottom: 5px;
-    }
-    .c3poster2 div{
-      margin: 8px 0px;
-      list-style: none;
-      text-decoration: none;
-      font-size: 14px;
-    }
-    .poster1div1 div {
-      cursor: pointer;
-      border: 2px #423161  solid;
-      float: left;
-      margin-top: 8px;
-      padding: 2px 8px;
-      border-radius: 15px 0px 15px 15px ;
-      letter-spacing: 1px;
-      transition: all 0.3s ease;
-    }
-    .poster1div1 div:hover {
-      color: white;
-      background: #423161;
-    }
+  }
+  .container3mono:hover {
+    transform: scale(1.1);
+  }
+  .c3poster1 {
+    width: 50%;
+    height: auto;
+    overflow: hidden;
+    border-radius: 0 30px 0 30px;
+  }
+  .c3poster2 {
+    padding-bottom: 15px;
+    height: 100%;
+    width: 50%;
+    padding-left: 10px;
+    overflow: hidden;
+    border-radius: 0 30px 0 0;
+  }
+  .c3poster2 h3 {
+    font-size: 16px;
+    margin-top: 8px;
+    margin-bottom: 5px;
+  }
+  .c3poster2 div {
+    margin: 8px 0px;
+    list-style: none;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  .poster1div1 div {
+    cursor: pointer;
+    border: 2px #423161 solid;
+    float: left;
+    margin-top: 8px;
+    padding: 2px 8px;
+    border-radius: 15px 0px 15px 15px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+  }
+  .poster1div1 div:hover {
+    color: white;
+    background: #423161;
+  }
 }
 
-@media only screen and (max-width: 602px) and (min-width: 500px){
-  nav {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    height: 65px;
-    width: 100vw;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  .dash{
-    color: white;
-    font-size: 30px;
-  }
- 
-  nav ul {
-    display: flex;
-    flex-wrap: nowrap;
-    list-style: none;
-    align-items: center;
-    justify-content: center;
-  }
-  nav ul li {
-    cursor: pointer;
-    margin-left: 30px;
-    margin-right:30px;
-  }
-  nav ul li a {
-    color: #f2f2f2;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 8px 15px;
-    border-radius: 5px;
-    letter-spacing: 1px;
-    transition: all 0.5s ease;
-  }
-  nav ul li a.active,
-  nav ul li a:hover {
-   
-    background-color: #423161;
-  }
-  
-  .container1{
+@media only screen and (max-width: 602px) and (min-width: 500px) {
+  .container1 {
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -937,40 +757,38 @@ input {
     background-color: #252525;
     margin-bottom: 20px;
   }
-  .poster1{
+  .poster1 {
     height: auto;
     width: 60%;
     background-color: #252525;
-    border: #252525  1px solid;
-    border-radius: 30px 0  0 30px;
+    border: #252525 1px solid;
+    border-radius: 30px 0 0 30px;
   }
-  .poster2{
+  .poster2 {
     height: auto;
     width: 40%;
     background-color: #423161;
     float: right;
     border-radius: 0 30px 0 30px;
-  
   }
   .poster1 {
-    padding: 5px 10px 10px 10px ;
+    padding: 5px 10px 10px 10px;
   }
   .poster1 h1 {
     font-size: 22px;
     margin-top: 8px;
     margin-bottom: 5px;
-    
   }
- 
+
   .poster1div div {
     cursor: pointer;
-    font-size : 15px;
+    font-size: 15px;
     margin-right: 30px;
     margin-top: 5px;
-    border: 2px #423161  solid;
+    border: 2px #423161 solid;
     float: left;
     padding: 2px 10px 3px 10px;
-    border-radius: 15px 0px 15px 15px ;
+    border-radius: 15px 0px 15px 15px;
     letter-spacing: 1px;
     transition: all 0.3s ease;
   }
@@ -978,69 +796,66 @@ input {
     color: white;
     background: #423161;
   }
-  .poster1 p{
+  .poster1 p {
     margin-top: 2px;
     margin-bottom: 2px;
     line-height: 1.6;
   }
-  .overview{
+  .overview {
     font-size: 14px;
   }
-  
-  .genre1{
+
+  .genre1 {
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     width: 95vw;
-    margin-right:auto;
-    margin-left:auto;
+    margin-right: auto;
+    margin-left: auto;
     height: auto;
-   
-   
+
     color: white;
   }
-  .item1{
+  .item1 {
     border: 2px #423161 solid;
     margin-right: 5px;
     margin-left: 5px;
     width: auto;
     height: 4vh;
     margin-top: 5px;
-    border-radius: 15px 0px 15px 15px ;
+    border-radius: 15px 0px 15px 15px;
     padding: 2px 10px;
     font-size: 14px;
   }
-  input{
+  input {
     margin-top: 5px;
-    margin-left: 20px ;
+    margin-left: 20px;
     width: 150px;
     height: 5vh;
     border: 2px #423161 solid;
     border-radius: 15px;
-    margin-right: 10px ;
+    margin-right: 10px;
     outline: transparent;
     padding: 5px 9px;
     color: white;
-    background-color: #252525  ;
+    background-color: #252525;
   }
-  button{
+  button {
     cursor: pointer;
     color: white;
-     float: right;
-    
-      height: 5vh;
-      background-color: #423161 ;
-      border-radius: 15px;
-      border: 2px #423161 solid;
-    
-      
+    float: right;
+
+    height: 5vh;
+    background-color: #423161;
+    border-radius: 15px;
+    border: 2px #423161 solid;
   }
   .item1:hover {
     transition: all 0.5s ease;
     background-color: #423161;
   }
-  .container4{ 
+  .container4 {
     margin-right: auto;
     margin-left: auto;
     justify-content: center;
@@ -1048,10 +863,8 @@ input {
     margin-top: 15px;
     height: auto;
     width: 95vw;
-    
-   
-  } 
-  .container3mono{
+  }
+  .container3mono {
     background-color: #252525;
     cursor: pointer;
     display: flex;
@@ -1062,97 +875,52 @@ input {
     color: white;
     border-radius: 0 30px 30px 30px;
     transition: all 0.5s ease;
-    }
-    .container3mono:hover {
-      transform: scale(1.1);
-    }
-    .c3poster1{
-      width: 50%;
-      height: auto;
-      overflow: hidden;
-      border-radius: 0 30px 0 30px;
-      
-    }
-    .c3poster2{
-      padding-bottom: 15px;
-      height: 100%;
-      width: 50%;
-      padding-left: 10px ;
-      overflow: hidden;
-      border-radius: 0 30px 0 0;
-      
-    }
-    .c3poster2 h3{
-      font-size: 16px;
-      margin-top: 8px;
-      margin-bottom: 5px;
-    }
-    .c3poster2 div{
-      margin: 18px 0px;
-      list-style: none;
-      text-decoration: none;
-      font-size: 14px;
-    }
-    .poster1div1 div {
-      cursor: pointer;
-      border: 2px #423161  solid;
-      float: left;
-      margin-top: 8px;
-      padding: 2px 8px;
-      border-radius: 15px 0px 15px 15px ;
-      letter-spacing: 1px;
-      transition: all 0.3s ease;
-    }
-    .poster1div1 div:hover {
-      color: white;
-      background: #423161;
-    }
-}
-@media only screen and (max-width: 500px) and (min-width: 406px){
-  nav {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    height: 65px;
-    width: 100vw;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
   }
-  .dash{
-    color: white;
-    font-size: 30px;
+  .container3mono:hover {
+    transform: scale(1.1);
   }
- 
-  nav ul {
-    display: flex;
-    flex-wrap: nowrap;
+  .c3poster1 {
+    width: 50%;
+    height: auto;
+    overflow: hidden;
+    border-radius: 0 30px 0 30px;
+  }
+  .c3poster2 {
+    padding-bottom: 15px;
+    height: 100%;
+    width: 50%;
+    padding-left: 10px;
+    overflow: hidden;
+    border-radius: 0 30px 0 0;
+  }
+  .c3poster2 h3 {
+    font-size: 16px;
+    margin-top: 8px;
+    margin-bottom: 5px;
+  }
+  .c3poster2 div {
+    margin: 18px 0px;
     list-style: none;
-    align-items: center;
-    justify-content: center;
-  }
-  nav ul li {
-    cursor: pointer;
-    margin-left: 5px;
-    margin-right:6px;
-  }
-  nav ul li a {
-    color: #f2f2f2;
     text-decoration: none;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 8px 15px;
-    border-radius: 5px;
+    font-size: 14px;
+  }
+  .poster1div1 div {
+    cursor: pointer;
+    border: 2px #423161 solid;
+    float: left;
+    margin-top: 8px;
+    padding: 2px 8px;
+    border-radius: 15px 0px 15px 15px;
     letter-spacing: 1px;
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
   }
-  nav ul li a.active,
-  nav ul li a:hover {
-   
-    background-color: #423161;
+  .poster1div1 div:hover {
+    color: white;
+    background: #423161;
   }
-  
-  .container1{
+}
+@media only screen and (max-width: 500px) and (min-width: 406px) {
+  .container1 {
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -1164,40 +932,38 @@ input {
     background-color: #252525;
     margin-bottom: 20px;
   }
-  .poster1{
+  .poster1 {
     height: auto;
     width: 60%;
     background-color: #252525;
-    border: #252525  1px solid;
-    border-radius: 30px 0  0 30px;
+    border: #252525 1px solid;
+    border-radius: 30px 0 0 30px;
   }
-  .poster2{
+  .poster2 {
     height: auto;
     width: 40%;
     background-color: #423161;
     float: right;
     border-radius: 0 30px 0 30px;
-  
   }
   .poster1 {
-    padding: 5px 10px 10px 10px ;
+    padding: 5px 10px 10px 10px;
   }
   .poster1 h1 {
     font-size: 18px;
     margin-top: 8px;
     margin-bottom: 5px;
-    
   }
- 
+
   .poster1div div {
     cursor: pointer;
-    font-size : 13px;
+    font-size: 13px;
     margin-right: 30px;
     margin-top: 5px;
-    border: 2px #423161  solid;
+    border: 2px #423161 solid;
     float: left;
     padding: 2px 10px 3px 10px;
-    border-radius: 15px 0px 15px 15px ;
+    border-radius: 15px 0px 15px 15px;
     letter-spacing: 1px;
     transition: all 0.3s ease;
   }
@@ -1205,72 +971,68 @@ input {
     color: white;
     background: #423161;
   }
-  .poster1 p{
+  .poster1 p {
     font-size: 12px;
     margin-top: 2px;
     margin-bottom: 2px;
     line-height: 1.6;
   }
-  .overview{
+  .overview {
     font-size: 12px;
   }
-  
-  .genre1{
-    
+
+  .genre1 {
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     width: 95vw;
-    margin-right:auto;
-    margin-left:auto;
-   
+    margin-right: auto;
+    margin-left: auto;
+
     height: auto;
-   
-   
+
     color: white;
   }
-  .item1{
+  .item1 {
     margin-top: 5px;
     border: 2px #423161 solid;
     margin-right: 5px;
     margin-left: 5px;
     width: auto;
     height: 4vh;
-    border-radius: 15px 0px 15px 15px ;
+    border-radius: 15px 0px 15px 15px;
     padding: 2px 10px;
     font-size: 14px;
   }
-  input{
+  input {
     margin-top: 5px;
-    margin-left: 20px ;
+    margin-left: 20px;
     width: 150px;
     height: 5vh;
     border: 2px #423161 solid;
     border-radius: 15px;
-    margin-right: 10px ;
+    margin-right: 10px;
     outline: transparent;
     padding: 5px 9px;
     color: white;
-    background-color: #252525  ;
+    background-color: #252525;
   }
-  button{
+  button {
     cursor: pointer;
     color: white;
-     float: right;
-    
-      height: 5vh;
-      background-color: #423161 ;
-      border-radius: 15px;
-      border: 2px #423161 solid;
-    
-      
+    float: right;
+
+    height: 5vh;
+    background-color: #423161;
+    border-radius: 15px;
+    border: 2px #423161 solid;
   }
   .item1:hover {
     transition: all 0.5s ease;
     background-color: #423161;
   }
-  .container4{ 
+  .container4 {
     margin-right: auto;
     margin-left: auto;
     justify-content: center;
@@ -1278,10 +1040,8 @@ input {
     margin-top: 15px;
     height: auto;
     width: 95vw;
-    
-   
-  } 
-  .container3mono{
+  }
+  .container3mono {
     background-color: #252525;
     cursor: pointer;
     display: flex;
@@ -1292,101 +1052,55 @@ input {
     color: white;
     border-radius: 0 30px 30px 30px;
     transition: all 0.5s ease;
-    }
-    .container3mono:hover {
-      -webkit-tap-highlight-color: transparent;
-      transform: scale(1.1);
-    }
-    .c3poster1{
-      width: 50%;
-      height: auto;
-      overflow: hidden;
-      border-radius: 0 30px 0 30px;
-      
-    }
-    .c3poster2{
-      padding-bottom: 15px;
-      height: 100%;
-      width: 50%;
-      padding-left: 10px ;
-      padding-right: 10px ;
-      overflow: hidden;
-      border-radius: 0 30px 0 0;
-      
-    }
-    .c3poster2 h3{
-      font-size: 16px;
-      margin-top: 8px;
-      margin-bottom: 5px;
-    }
-    .c3poster2 div{
-      margin: 8px 0px;
-      list-style: none;
-      text-decoration: none;
-      font-size: 14px;
-    }
-    .poster1div1 div {
-      cursor: pointer;
-      border: 2px #423161  solid;
-      float: left;
-      margin-top: 18px;
-     
-      padding: 2px 8px;
-      border-radius: 15px 0px 15px 15px ;
-      letter-spacing: 1px;
-      transition: all 0.3s ease;
-    }
-    .poster1div1 div:hover {
-      color: white;
-      background: #423161;
-    }
-}
-@media only screen and (max-width: 406px) and (min-width: 300px){
-  nav {
-    display: flex;
-    
-    height: 65px;
-    width: 100vw;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-left: auto;
-    margin-right:auto;
   }
-  .dash{
-    color: white;
-    font-size: 30px;
+  .container3mono:hover {
+    -webkit-tap-highlight-color: transparent;
+    transform: scale(1.1);
   }
- 
-  nav ul {
-    display: flex;
-    flex-wrap: nowrap;
+  .c3poster1 {
+    width: 50%;
+    height: auto;
+    overflow: hidden;
+    border-radius: 0 30px 0 30px;
+  }
+  .c3poster2 {
+    padding-bottom: 15px;
+    height: 100%;
+    width: 50%;
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow: hidden;
+    border-radius: 0 30px 0 0;
+  }
+  .c3poster2 h3 {
+    font-size: 16px;
+    margin-top: 8px;
+    margin-bottom: 5px;
+  }
+  .c3poster2 div {
+    margin: 8px 0px;
     list-style: none;
-    align-items: center;
-    justify-content: center;
-  }
-  nav ul li {
-    cursor: pointer;
-    margin-left: auto;
-    margin-right:auto;
-  }
-  nav ul li a {
-    color: #f2f2f2;
     text-decoration: none;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 8px 15px;
-    border-radius: 5px;
+    font-size: 14px;
+  }
+  .poster1div1 div {
+    cursor: pointer;
+    border: 2px #423161 solid;
+    float: left;
+    margin-top: 18px;
+
+    padding: 2px 8px;
+    border-radius: 15px 0px 15px 15px;
     letter-spacing: 1px;
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
   }
-  nav ul li a.active,
-  nav ul li a:hover {
-   
-    background-color: #423161;
+  .poster1div1 div:hover {
+    color: white;
+    background: #423161;
   }
-  
-  .container1{
+}
+@media only screen and (max-width: 406px) and (min-width: 300px) {
+  .container1 {
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -1398,39 +1112,37 @@ input {
     background-color: #252525;
     margin-bottom: 20px;
   }
-  .poster1{
+  .poster1 {
     height: auto;
     width: 60%;
     background-color: #252525;
-    border: #252525  1px solid;
-    border-radius: 30px 0  0 30px;
+    border: #252525 1px solid;
+    border-radius: 30px 0 0 30px;
   }
-  .poster2{
+  .poster2 {
     height: auto;
     width: 40%;
     background-color: #423161;
     float: right;
     border-radius: 0 30px 0 30px;
-  
   }
   .poster1 {
-    padding: 5px 10px 10px 10px ;
+    padding: 5px 10px 10px 10px;
   }
   .poster1 h1 {
     font-size: 12px;
     margin-top: 8px;
     margin-bottom: 5px;
-    
   }
   .poster1div div {
     cursor: pointer;
-    font-size : 8px;
+    font-size: 8px;
     margin-right: 30px;
     margin-top: 5px;
-    border: 2px #423161  solid;
+    border: 2px #423161 solid;
     float: left;
     padding: 2px 10px 3px 10px;
-    border-radius: 15px 0px 15px 15px ;
+    border-radius: 15px 0px 15px 15px;
     letter-spacing: 1px;
     transition: all 0.3s ease;
   }
@@ -1438,71 +1150,68 @@ input {
     color: white;
     background: #423161;
   }
-  .poster1 p{
+  .poster1 p {
     font-size: 9px;
     margin-top: 2px;
     margin-bottom: 2px;
     line-height: 1.6;
   }
-  .overview{
+  .overview {
     font-size: 8px;
   }
-  
-  .genre1{
+
+  .genre1 {
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     width: 95vw;
-    margin-right:auto;
-    
-    margin-left:auto;
+    margin-right: auto;
+
+    margin-left: auto;
     height: auto;
-   
-   
+
     color: white;
   }
-  .item1{
+  .item1 {
     margin-top: 5px;
     border: 2px #423161 solid;
     margin-right: 5px;
     margin-left: 5px;
     width: auto;
     height: 4vh;
-    border-radius: 15px 0px 15px 15px ;
+    border-radius: 15px 0px 15px 15px;
     padding: 2px 10px;
     font-size: 14px;
   }
-  input{
+  input {
     margin-top: 5px;
-    margin-left: 20px ;
+    margin-left: 20px;
     width: 150px;
     height: 5vh;
     border: 2px #423161 solid;
     border-radius: 15px;
-    margin-right: 10px ;
+    margin-right: 10px;
     outline: transparent;
     padding: 5px 9px;
     color: white;
-    background-color: #252525  ;
+    background-color: #252525;
   }
-  button{
+  button {
     cursor: pointer;
     color: white;
-     float: right;
-    
-      height: 5vh;
-      background-color: #423161 ;
-      border-radius: 15px;
-      border: 2px #423161 solid;
-    
-      
+    float: right;
+
+    height: 5vh;
+    background-color: #423161;
+    border-radius: 15px;
+    border: 2px #423161 solid;
   }
   .item1:hover {
     transition: all 0.5s ease;
     background-color: #423161;
   }
-  .container4{ 
+  .container4 {
     margin-right: auto;
     margin-left: auto;
     justify-content: center;
@@ -1510,10 +1219,8 @@ input {
     margin-top: 15px;
     height: auto;
     width: 100vw;
-    
-   
-  } 
-  .container3mono{
+  }
+  .container3mono {
     background-color: #252525;
     cursor: pointer;
     display: flex;
@@ -1524,53 +1231,49 @@ input {
     color: white;
     border-radius: 0 30px 30px 30px;
     transition: all 0.5s ease;
-    }
-    .container3mono:hover {
-      transform: scale(1.1);
-    }
-    .c3poster1{
-      width: 50%;
-      height: auto;
-      overflow: hidden;
-      border-radius: 0 30px 0 30px;
-      
-    }
-    .c3poster2{
-      padding-bottom: 15px;
-      height: 100%;
-      width: 50%;
-      padding-left: 10px ;
-      padding-right: 10px ;
-      overflow: hidden;
-      border-radius: 0 30px 0 0;
-      
-    }
-    .c3poster2 h3{
-      font-size: 16px;
-      margin-top: 8px;
-      margin-bottom: 5px;
-    }
-    .c3poster2 div{
-      margin: 8px 0px;
-      list-style: none;
-      text-decoration: none;
-      font-size: 14px;
-    }
-    .poster1div1 div {
-      cursor: pointer;
-      border: 2px #423161  solid;
-      float: left;
-      margin-top: 18px;
-     
-      padding: 2px 8px;
-      border-radius: 15px 0px 15px 15px ;
-      letter-spacing: 1px;
-      transition: all 0.3s ease;
-    }
-    .poster1div1 div:hover {
-      color: white;
-      background: #423161;
-    }
+  }
+  .container3mono:hover {
+    transform: scale(1.1);
+  }
+  .c3poster1 {
+    width: 50%;
+    height: auto;
+    overflow: hidden;
+    border-radius: 0 30px 0 30px;
+  }
+  .c3poster2 {
+    padding-bottom: 15px;
+    height: 100%;
+    width: 50%;
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow: hidden;
+    border-radius: 0 30px 0 0;
+  }
+  .c3poster2 h3 {
+    font-size: 16px;
+    margin-top: 8px;
+    margin-bottom: 5px;
+  }
+  .c3poster2 div {
+    margin: 8px 0px;
+    list-style: none;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  .poster1div1 div {
+    cursor: pointer;
+    border: 2px #423161 solid;
+    float: left;
+    margin-top: 18px;
+
+    padding: 2px 8px;
+    border-radius: 15px 0px 15px 15px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+  }
+  .poster1div1 div:hover {
+    color: white;
+    background: #423161;
+  }
 }
-
-

@@ -1,11 +1,17 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Navigation = () => {
+
+  const navigate = useNavigate()
+
   return (
     <div className="navbar">
       <ul>
-        <li>Youtube</li>
-        <li>Upload</li>
+        <li onClick={()=>{navigate("/")}}> 
+          Youtube
+        </li>
+        <li onClick={()=>{navigate("/upload")}}>Upload</li>
       </ul>
     </div>
   );
