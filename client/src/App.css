@@ -31,12 +31,6 @@ body {
   background-color: #423161;
 }
 
-li {
-  float: left;
-  list-style-type: none;
-
-  font-size: 25px;
-}
 /* ******************* */
 
 .container1 {
@@ -51,6 +45,7 @@ li {
   background-color: #252525;
   margin-bottom: 20px;
 }
+
 .poster2box {
   text-align: center;
   color: white;
@@ -85,34 +80,10 @@ li {
   background: #423161;
 }
 
-.genre1 {
-  margin: auto;
-  display: flex;
-  width: 80vw;
-  height: 5vh;
-  align-items: center;
-  justify-content: center;
-  color: white;
-}
-.item1 {
-  cursor: pointer;
-  border: 2px #423161 solid;
-  margin-right: 30px;
-  width: auto;
-  height: auto;
-  border-radius: 15px 0px 15px 15px;
-  padding: 5px 10px;
-  font-size: 20px;
-}
-.item1:hover {
-  transition: all 0.5s ease;
-  background-color: #423161;
-}
-
 input {
   margin: 10px 0px;
   width: 250px;
-  height: 5vh;
+  height: 20px;
   border: 2px #423161 solid;
   border-radius: 15px;
   margin-right: 10px;
@@ -126,27 +97,24 @@ input {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: 15px;
-  margin-right: auto;
-  margin-left: auto;
+  margin: auto;
   height: auto;
-  width: 80vw;
+  width: 90vw;
 }
 .container3mono {
   background-color: #252525;
   cursor: pointer;
-  margin-left: 4px;
+  margin: 5px;
   display: flex;
-  margin: 4px;
   width: 32%;
   border: 2px #423161 solid;
-  height: 90%;
+  height: 290px;
   color: white;
   border-radius: 0 30px 30px 30px;
   transition: all 0.5s ease;
 }
 .container3mono:hover {
-  transform: scale(1.1);
+  transform: scale(1.03);
 }
 .c3poster1 {
   width: 50%;
@@ -211,159 +179,26 @@ input {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 20vh;
   flex-direction: column;
+}
+
+video {
+  margin-top: 100px;
+  height: 300px;
+  width: 600px;
 }
 
 /* ****************** */
 @media only screen and (max-width: 1250px) and (min-width: 1000px) {
-  .container1 {
-    margin-right: auto;
-    margin-left: auto;
-    display: flex;
-    height: auto;
-    width: 90vw;
-    flex-direction: row;
-    color: white;
-    border-radius: 30px;
-    background-color: #252525;
-    margin-bottom: 20px;
-  }
-  .poster1 {
-    height: auto;
-    width: 60%;
-    background-color: #252525;
-    border: #252525 1px solid;
-    border-radius: 30px 0 0 30px;
-  }
-  .poster2 {
-    height: auto;
-    width: 40%;
-    background-color: #423161;
-    float: right;
-    border-radius: 0 30px 0 30px;
-  }
-  .poster1 {
-    padding: 5px 30px 10px 30px;
-  }
-  .poster1 h1 {
-    font-size: 40px;
-  }
-  .poster1 ul {
-    float: left;
-    display: flex;
-    margin-right: 100px;
-    list-style: none;
-    margin-top: 20px;
-  }
-  .poster1div div {
-    cursor: pointer;
-    font-size: 20px;
-    margin-right: 30px;
-    border: 2px #423161 solid;
-    float: left;
-    padding: 2px 10px 3px 10px;
-    border-radius: 15px 0px 15px 15px;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-  }
-  .poster1div div:hover {
-    color: white;
-    background: #423161;
-  }
-  .poster1 p {
-    line-height: 1.6;
-  }
-  .overview {
-    font-size: 20px;
-  }
-
-  .genre1 {
-    display: flex;
-    width: 90vw;
-    margin-right: auto;
-    margin-left: auto;
-    height: 5vh;
-    align-items: center;
-    justify-content: center;
-    color: white;
-  }
-  .item1 {
-    border: 2px #423161 solid;
-    margin-right: auto;
-    margin-left: auto;
-    width: auto;
-    height: 4vh;
-    border-radius: 15px 0px 15px 15px;
-    padding: 2px 10px;
-    font-size: 15px;
-  }
-  input {
-    margin: auto;
-    width: 150px;
-    height: 5vh;
-    border: 2px #423161 solid;
-    border-radius: 15px;
-    margin-right: 10px;
-    outline: transparent;
-    padding: 5px 9px;
-    color: white;
-    background-color: #252525;
-  }
-  button {
-    cursor: pointer;
-    color: white;
-    margin: auto;
-    width: auto;
-    height: 5vh;
-    background-color: #423161;
-    border-radius: 15px;
-    border: 2px #423161 solid;
-    margin-right: 50px;
-  }
-  .item1:hover {
-    transition: all 0.5s ease;
-    background-color: #423161;
-  }
-  .container4 {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-top: 15px;
-    margin-right: auto;
-    margin-left: auto;
-    height: auto;
-    width: 90vw;
-  }
   .container3mono {
-    background-color: #252525;
-    cursor: pointer;
-    display: flex;
-    margin: 4px;
-    width: 32%;
-    border: 2px #423161 solid;
-    height: 90%;
-    color: white;
-    border-radius: 0 30px 30px 30px;
-    transition: all 0.5s ease;
+    width: 31%;
+
+    height: 230px;
   }
   .container3mono:hover {
     transform: scale(1.1);
   }
-  .c3poster1 {
-    width: 50%;
-    height: auto;
-    overflow: hidden;
-    border-radius: 0 30px 0 30px;
-  }
-  .c3poster2 {
-    padding-bottom: 15px;
-    height: 100%;
-    width: 50%;
-    padding-left: 10px;
-    overflow: hidden;
-    border-radius: 0 30px 0 0;
-  }
+
   .c3poster2 h3 {
     font-size: 16px;
     margin-top: 8px;
@@ -391,125 +226,6 @@ input {
   }
 }
 @media only screen and (max-width: 1000px) and (min-width: 750px) {
-  .container1 {
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    height: auto;
-    width: 95vw;
-    flex-direction: row;
-    color: white;
-    border-radius: 30px;
-    background-color: #252525;
-    margin-bottom: 20px;
-  }
-  .poster1 {
-    height: auto;
-    width: 60%;
-    background-color: #252525;
-    border: #252525 1px solid;
-    border-radius: 30px 0 0 30px;
-  }
-  .poster2 {
-    height: auto;
-    width: 40%;
-    background-color: #423161;
-    float: right;
-    border-radius: 0 30px 0 30px;
-  }
-  .poster1 {
-    padding: 5px 15px 10px 30px;
-  }
-  .poster1 h1 {
-    font-size: 30px;
-  }
-  .poster1 ul {
-    float: left;
-    display: flex;
-    margin-right: 100px;
-    list-style: none;
-    margin-top: 20px;
-  }
-  .poster1div div {
-    cursor: pointer;
-    font-size: 18px;
-    margin-right: 30px;
-
-    border: 2px #423161 solid;
-    float: left;
-    padding: 2px 10px 3px 10px;
-    border-radius: 15px 0px 15px 15px;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-  }
-  .poster1div div:hover {
-    color: white;
-    background: #423161;
-  }
-  .poster1 p {
-    margin: 8px 0px;
-    line-height: 1.6;
-  }
-  .overview {
-    font-size: 18px;
-  }
-
-  .genre1 {
-    box-sizing: border-box;
-    display: flex;
-    width: 95vw;
-    margin-right: auto;
-    margin-left: auto;
-    height: 5vh;
-    align-items: center;
-    justify-content: space-between;
-    color: white;
-  }
-  .item1 {
-    border: 2px #423161 solid;
-    margin-right: 5px;
-    margin-left: auto;
-    width: auto;
-    height: 4vh;
-    border-radius: 15px 0px 15px 15px;
-    padding: 2px 10px;
-    font-size: 14px;
-  }
-  input {
-    margin: auto;
-    width: 150px;
-    height: 5vh;
-    border: 2px #423161 solid;
-    border-radius: 15px;
-    margin-right: 10px;
-    outline: transparent;
-    padding: 5px 9px;
-    color: white;
-    background-color: #252525;
-  }
-  button {
-    cursor: pointer;
-    color: white;
-    margin: auto;
-    width: auto;
-    height: 5vh;
-    background-color: #423161;
-    border-radius: 15px;
-    border: 2px #423161 solid;
-    margin-right: 50px;
-  }
-  .item1:hover {
-    transition: all 0.5s ease;
-    background-color: #423161;
-  }
-  .container4 {
-    display: flex;
-    margin-top: 15px;
-    height: auto;
-    width: 90vw;
-    margin-right: auto;
-    margin-left: auto;
-  }
   .container3mono {
     background-color: #252525;
     cursor: pointer;
@@ -566,125 +282,6 @@ input {
   }
 }
 @media only screen and (max-width: 750px) and (min-width: 602px) {
-  .container1 {
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    height: auto;
-    width: 95vw;
-    flex-direction: row;
-    color: white;
-    border-radius: 30px;
-    background-color: #252525;
-    margin-bottom: 20px;
-  }
-  .poster1 {
-    height: auto;
-    width: 60%;
-    background-color: #252525;
-    border: #252525 1px solid;
-    border-radius: 30px 0 0 30px;
-  }
-  .poster2 {
-    height: auto;
-    width: 40%;
-    background-color: #423161;
-    float: right;
-    border-radius: 0 30px 0 30px;
-  }
-  .poster1 {
-    padding: 5px 10px 10px 10px;
-  }
-  .poster1 h1 {
-    font-size: 24px;
-    margin-top: 8px;
-    margin-bottom: 5px;
-  }
-
-  .poster1div div {
-    cursor: pointer;
-    font-size: 15px;
-    margin-right: 30px;
-    margin-top: 5px;
-    border: 2px #423161 solid;
-    float: left;
-    padding: 2px 10px 3px 10px;
-    border-radius: 15px 0px 15px 15px;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-  }
-  .poster1div div:hover {
-    color: white;
-    background: #423161;
-  }
-  .poster1 p {
-    margin-top: 2px;
-    margin-bottom: 2px;
-    line-height: 1.6;
-  }
-  .overview {
-    font-size: 15px;
-  }
-
-  .genre1 {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 95vw;
-    margin-right: auto;
-    margin-left: auto;
-    height: auto;
-
-    color: white;
-  }
-  .item1 {
-    border: 2px #423161 solid;
-    margin-right: 5px;
-    margin-left: 5px;
-    width: auto;
-    height: 4vh;
-    margin-top: 5px;
-    border-radius: 15px 0px 15px 15px;
-    padding: 2px 10px;
-    font-size: 14px;
-  }
-  input {
-    margin-top: 5px;
-    margin-left: 20px;
-    width: 150px;
-    height: 5vh;
-    border: 2px #423161 solid;
-    border-radius: 15px;
-    margin-right: 10px;
-    outline: transparent;
-    padding: 5px 9px;
-    color: white;
-    background-color: #252525;
-  }
-  button {
-    cursor: pointer;
-    color: white;
-    float: right;
-
-    height: 5vh;
-    background-color: #423161;
-    border-radius: 15px;
-    border: 2px #423161 solid;
-  }
-  .item1:hover {
-    transition: all 0.5s ease;
-    background-color: #423161;
-  }
-  .container4 {
-    display: flex;
-    margin-top: 15px;
-    height: auto;
-    width: 95vw;
-    margin-right: auto;
-    margin-left: auto;
-    justify-content: center;
-  }
   .container3mono {
     margin-right: auto;
     margin-left: auto;
@@ -744,121 +341,9 @@ input {
 }
 
 @media only screen and (max-width: 602px) and (min-width: 500px) {
-  .container1 {
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    height: auto;
-    width: 95vw;
-    flex-direction: row;
-    color: white;
-    border-radius: 30px;
-    background-color: #252525;
-    margin-bottom: 20px;
-  }
-  .poster1 {
-    height: auto;
-    width: 60%;
-    background-color: #252525;
-    border: #252525 1px solid;
-    border-radius: 30px 0 0 30px;
-  }
-  .poster2 {
-    height: auto;
-    width: 40%;
-    background-color: #423161;
-    float: right;
-    border-radius: 0 30px 0 30px;
-  }
-  .poster1 {
-    padding: 5px 10px 10px 10px;
-  }
-  .poster1 h1 {
-    font-size: 22px;
-    margin-top: 8px;
-    margin-bottom: 5px;
-  }
-
-  .poster1div div {
-    cursor: pointer;
-    font-size: 15px;
-    margin-right: 30px;
-    margin-top: 5px;
-    border: 2px #423161 solid;
-    float: left;
-    padding: 2px 10px 3px 10px;
-    border-radius: 15px 0px 15px 15px;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-  }
-  .poster1div div:hover {
-    color: white;
-    background: #423161;
-  }
-  .poster1 p {
-    margin-top: 2px;
-    margin-bottom: 2px;
-    line-height: 1.6;
-  }
-  .overview {
-    font-size: 14px;
-  }
-
-  .genre1 {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 95vw;
-    margin-right: auto;
-    margin-left: auto;
-    height: auto;
-
-    color: white;
-  }
-  .item1 {
-    border: 2px #423161 solid;
-    margin-right: 5px;
-    margin-left: 5px;
-    width: auto;
-    height: 4vh;
-    margin-top: 5px;
-    border-radius: 15px 0px 15px 15px;
-    padding: 2px 10px;
-    font-size: 14px;
-  }
-  input {
-    margin-top: 5px;
-    margin-left: 20px;
-    width: 150px;
-    height: 5vh;
-    border: 2px #423161 solid;
-    border-radius: 15px;
-    margin-right: 10px;
-    outline: transparent;
-    padding: 5px 9px;
-    color: white;
-    background-color: #252525;
-  }
-  button {
-    cursor: pointer;
-    color: white;
-    float: right;
-
-    height: 5vh;
-    background-color: #423161;
-    border-radius: 15px;
-    border: 2px #423161 solid;
-  }
-  .item1:hover {
-    transition: all 0.5s ease;
-    background-color: #423161;
-  }
   .container4 {
-    margin-right: auto;
-    margin-left: auto;
-    justify-content: center;
     display: flex;
+    justify-content: center;
     margin-top: 15px;
     height: auto;
     width: 95vw;
@@ -917,120 +402,15 @@ input {
     color: white;
     background: #423161;
   }
+
+  video {
+    margin-top: 100px;
+    height: 250px;
+    width: 500px;
+  }
 }
 @media only screen and (max-width: 500px) and (min-width: 406px) {
-  .container1 {
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    height: auto;
-    width: 99vw;
-    flex-direction: row;
-    color: white;
-    border-radius: 30px;
-    background-color: #252525;
-    margin-bottom: 20px;
-  }
-  .poster1 {
-    height: auto;
-    width: 60%;
-    background-color: #252525;
-    border: #252525 1px solid;
-    border-radius: 30px 0 0 30px;
-  }
-  .poster2 {
-    height: auto;
-    width: 40%;
-    background-color: #423161;
-    float: right;
-    border-radius: 0 30px 0 30px;
-  }
-  .poster1 {
-    padding: 5px 10px 10px 10px;
-  }
-  .poster1 h1 {
-    font-size: 18px;
-    margin-top: 8px;
-    margin-bottom: 5px;
-  }
-
-  .poster1div div {
-    cursor: pointer;
-    font-size: 13px;
-    margin-right: 30px;
-    margin-top: 5px;
-    border: 2px #423161 solid;
-    float: left;
-    padding: 2px 10px 3px 10px;
-    border-radius: 15px 0px 15px 15px;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-  }
-  .poster1div div:hover {
-    color: white;
-    background: #423161;
-  }
-  .poster1 p {
-    font-size: 12px;
-    margin-top: 2px;
-    margin-bottom: 2px;
-    line-height: 1.6;
-  }
-  .overview {
-    font-size: 12px;
-  }
-
-  .genre1 {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 95vw;
-    margin-right: auto;
-    margin-left: auto;
-
-    height: auto;
-
-    color: white;
-  }
-  .item1 {
-    margin-top: 5px;
-    border: 2px #423161 solid;
-    margin-right: 5px;
-    margin-left: 5px;
-    width: auto;
-    height: 4vh;
-    border-radius: 15px 0px 15px 15px;
-    padding: 2px 10px;
-    font-size: 14px;
-  }
-  input {
-    margin-top: 5px;
-    margin-left: 20px;
-    width: 150px;
-    height: 5vh;
-    border: 2px #423161 solid;
-    border-radius: 15px;
-    margin-right: 10px;
-    outline: transparent;
-    padding: 5px 9px;
-    color: white;
-    background-color: #252525;
-  }
-  button {
-    cursor: pointer;
-    color: white;
-    float: right;
-
-    height: 5vh;
-    background-color: #423161;
-    border-radius: 15px;
-    border: 2px #423161 solid;
-  }
-  .item1:hover {
-    transition: all 0.5s ease;
-    background-color: #423161;
-  }
+ 
   .container4 {
     margin-right: auto;
     margin-left: auto;
@@ -1097,119 +477,16 @@ input {
     color: white;
     background: #423161;
   }
+
+  video {
+    margin-top: 100px;
+    height: 200px;
+    width: 400px;
+  }
+
 }
 @media only screen and (max-width: 406px) and (min-width: 300px) {
-  .container1 {
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    height: auto;
-    width: 99vw;
-    flex-direction: row;
-    color: white;
-    border-radius: 30px;
-    background-color: #252525;
-    margin-bottom: 20px;
-  }
-  .poster1 {
-    height: auto;
-    width: 60%;
-    background-color: #252525;
-    border: #252525 1px solid;
-    border-radius: 30px 0 0 30px;
-  }
-  .poster2 {
-    height: auto;
-    width: 40%;
-    background-color: #423161;
-    float: right;
-    border-radius: 0 30px 0 30px;
-  }
-  .poster1 {
-    padding: 5px 10px 10px 10px;
-  }
-  .poster1 h1 {
-    font-size: 12px;
-    margin-top: 8px;
-    margin-bottom: 5px;
-  }
-  .poster1div div {
-    cursor: pointer;
-    font-size: 8px;
-    margin-right: 30px;
-    margin-top: 5px;
-    border: 2px #423161 solid;
-    float: left;
-    padding: 2px 10px 3px 10px;
-    border-radius: 15px 0px 15px 15px;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-  }
-  .poster1div div:hover {
-    color: white;
-    background: #423161;
-  }
-  .poster1 p {
-    font-size: 9px;
-    margin-top: 2px;
-    margin-bottom: 2px;
-    line-height: 1.6;
-  }
-  .overview {
-    font-size: 8px;
-  }
-
-  .genre1 {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 95vw;
-    margin-right: auto;
-
-    margin-left: auto;
-    height: auto;
-
-    color: white;
-  }
-  .item1 {
-    margin-top: 5px;
-    border: 2px #423161 solid;
-    margin-right: 5px;
-    margin-left: 5px;
-    width: auto;
-    height: 4vh;
-    border-radius: 15px 0px 15px 15px;
-    padding: 2px 10px;
-    font-size: 14px;
-  }
-  input {
-    margin-top: 5px;
-    margin-left: 20px;
-    width: 150px;
-    height: 5vh;
-    border: 2px #423161 solid;
-    border-radius: 15px;
-    margin-right: 10px;
-    outline: transparent;
-    padding: 5px 9px;
-    color: white;
-    background-color: #252525;
-  }
-  button {
-    cursor: pointer;
-    color: white;
-    float: right;
-
-    height: 5vh;
-    background-color: #423161;
-    border-radius: 15px;
-    border: 2px #423161 solid;
-  }
-  .item1:hover {
-    transition: all 0.5s ease;
-    background-color: #423161;
-  }
+ 
   .container4 {
     margin-right: auto;
     margin-left: auto;
@@ -1274,5 +551,10 @@ input {
   .poster1div1 div:hover {
     color: white;
     background: #423161;
+  }
+  video {
+    margin-top: 100px;
+    height: 160px;
+    width: 320px;
   }
 }
