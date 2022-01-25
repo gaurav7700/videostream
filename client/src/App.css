@@ -338,7 +338,6 @@ input {
   .container3mono {
     background-color: #252525;
     cursor: pointer;
-
     display: flex;
     margin: 4px;
     width: 32%;
