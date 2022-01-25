@@ -9,7 +9,7 @@ const Navigation = () => {
     <div className="navbar">
       <ul>
         <li onClick={()=>{navigate("/")}}> 
-          Youtube
+          Video Stream
         </li>
         <li onClick={()=>{navigate("/upload")}}>Upload</li>
       </ul>

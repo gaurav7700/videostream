@@ -25,6 +25,7 @@ body {
   border-radius: 5px;
   letter-spacing: 1px;
   transition: all 0.5s ease;
+  background-color: #423161;
 }
 .navbar ul li.active,
 .navbar ul li:hover {
