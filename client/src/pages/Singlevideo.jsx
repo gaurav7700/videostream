@@ -40,7 +40,7 @@ const Singlevideo = () => {
           >
             Close Video
           </div>
-          <video width="450" height="200" controls autoPlay>
+          <video width="400" height="200" controls autoPlay>
             <source src={singlevideo} type="video/mp4" />
           </video>
         </div>
